@@ -2,10 +2,11 @@
 
 
 ## Links
-  [twitter](https://x.com/AkaGhef)
+  [this page](https://akaghef.github.io/)
+  [twitter(main)](https://x.com/AkaGhef)
   [mathlog](https://mathlog.info/users/463)
   [youtube](https://www.youtube.com/@akaghef)
-  
+  [twitter(math)](https://x.com/juvenile_crimes
 ## Interests
   - **Mathematics, Physics**
     
@@ -24,7 +25,7 @@
      High-Precision, Compact &Fast
     
 # Events
-  [**event page**](https://github.com/akaghef/akaghef.github.io/blob/main/EventsTalks.md)
+  [**event page**](https://akaghef.github.io/EventsTalks.html)
 
  
 

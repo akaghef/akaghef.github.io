@@ -21,7 +21,7 @@
      High-Precision, Compact &Fast
     
 ## Events
-  another page
+  [**event page**](https://github.com/akaghef/akaghef.github.io/blob/main/EventsTalks.md)
 
  
 

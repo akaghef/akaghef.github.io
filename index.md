@@ -6,7 +6,9 @@
   [twitter(main)](https://x.com/AkaGhef)
   [mathlog](https://mathlog.info/users/463)
   [youtube](https://www.youtube.com/@akaghef)
-  [twitter(math)](https://x.com/juvenile_crimes
+  [twitter(math)](https://x.com/juvenile_crimes)
+  [twittter(minecraft)](https://x.com/akaghef_MC)
+  
 ## Interests
   - **Mathematics, Physics**
     

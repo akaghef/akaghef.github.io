@@ -8,11 +8,15 @@
 
 [**Apple CM**](https://www.dailymotion.com/video/x8sppvo)
 学部時代の所属チーム MeisterがAppleのMacのCMに出演しました．
+MacbookM1ユーザーです．
 
 ## 2024
 [**爆婚**](https://www.youtube.com/live/1fx-EqdIyZ8?si=tHxfcMK3bDO-pWgk)
 『非整数階微分』
 たけのこ⾚軍＆虹鮎さんの結婚を祝ってプレゼンしました．おめでとうございます！
+
+[**ものつくりにおけるMacの活用**](https://jp.pronews.com/column/202404021158476068.html)
+人力飛行機の設計やセンサー製作，運用の過程でどのようにMacを用いたか紹介しています．
 
 [**Romantic Math Night #1**](https://romanticmathnight.org/2435)
 『マイクラで分かる計算機の仕組み』

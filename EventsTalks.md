@@ -1,6 +1,13 @@
 # Events
 
 ## 2023
+[**鳥人間コンテスト2023**](https://www.youtube.com/watch?v=m_kIfLTDCak)
+東京工業大学Meisterの執行代(23代)として出場しました！我らが川見パイロット！
+ナビゲータとしてボートに乗り，飛行機と並走していました．一生の思い出です．
+パソコンを謎の台に置いて通信していた部分がテレビでクローズアップされました(おとうさんスイッチ)．
+
+[**Apple CM**](https://www.dailymotion.com/video/x8sppvo)
+学部時代の所属チーム MeisterがAppleのMacのCMに出演しました．
 
 ## 2024
 [**爆婚**](https://www.youtube.com/live/1fx-EqdIyZ8?si=tHxfcMK3bDO-pWgk)
@@ -19,6 +26,8 @@
 [**MATLAB Expo2024 Interview**](https://blogs.mathworks.com/japan-community/2025/02/03/interviewjapaninternationalbirdmanrally/?from=jp)
 2024/6/1『MATLABユーザーコミュニティインタビュー: 東京科学大 鳥人間チームMeisterの挑戦』
 Lightning Talkに登壇したら取材連絡を受けました．設計でMATLABをどのように活用したか紹介しました．
+
+
 
 ## 2025
 **attended to Conferences**

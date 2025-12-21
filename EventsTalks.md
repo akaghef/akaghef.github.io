@@ -39,8 +39,10 @@ attended to
 - [Conference on "Quantum Topology" @Bonn, Germany ](https://www.mpim-bonn.mpg.de/quantop25)
 - [Topology&Geometry2025 @Phu Quoc, Vietnam](https://viasm.edu.vn/hdkh/Conf-Topo-Geo-2025?userkey=program)
 
-**Short presentation at Poisson Geometry 2025 at Kyoto**
-[Poisson Geometry 2025 Nov.30](https://sites.google.com/view/jpoissongeometry25/)
+[**Short presentation at Poisson Geometry 2025 at Kyoto**](https://sites.google.com/view/jpoissongeometry25/)
+
+Nov.30
 "Operator realization of quantum groups and deformation of module-algebra structures"
+
 [presentation slide](https://www.overleaf.com/read/fpmcphxrtxrf#9cf842)
 

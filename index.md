@@ -6,28 +6,53 @@ title: Akaghef's Homepage
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/style.css">
+<script defer src="/assets/lang.js"></script>
 
 <main class="page-shell">
+  <div class="topbar">
+    <a class="home-mark" href="/">Akaghef</a>
+    <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch language">EN / JA</button>
+  </div>
+
   <section class="hero">
     <p class="eyebrow">Akaghef</p>
-    <h1>Math, machines, flight, and redstone.</h1>
+    <h1>
+      <span data-lang="en">Math, machines, flight, and redstone.</span>
+      <span data-lang="ja">数学、機械、飛行、そしてレッドストーン。</span>
+    </h1>
     <p class="hero-copy">
-      Personal homepage for research interests, engineering projects, talks, and internet traces.
+      <span data-lang="en">Personal homepage for research interests, engineering projects, talks, and internet traces.</span>
+      <span data-lang="ja">研究分野、ものづくり、発表、活動記録をまとめた個人ホームページです。</span>
     </p>
     <div class="hero-actions">
-      <a class="button button-primary" href="/EventsTalks.html">View Events</a>
-      <a class="button button-secondary" href="https://x.com/AkaGhef">Follow on X</a>
+      <a class="button button-primary" href="/EventsTalks.html">
+        <span data-lang="en">View Events</span>
+        <span data-lang="ja">イベントを見る</span>
+      </a>
+      <a class="button button-secondary" href="https://x.com/AkaGhef">
+        <span data-lang="en">Follow on X</span>
+        <span data-lang="ja">X を見る</span>
+      </a>
     </div>
   </section>
 
   <section class="panel">
     <div class="section-heading">
-      <p class="section-kicker">Links</p>
-      <h2>Find me elsewhere</h2>
+      <p class="section-kicker">
+        <span data-lang="en">Links</span>
+        <span data-lang="ja">リンク</span>
+      </p>
+      <h2>
+        <span data-lang="en">Find me elsewhere</span>
+        <span data-lang="ja">各種リンク</span>
+      </h2>
     </div>
     <div class="link-grid">
       <a class="link-card" href="https://akaghef.github.io/">
-        <span class="link-label">Homepage</span>
+        <span class="link-label">
+          <span data-lang="en">Homepage</span>
+          <span data-lang="ja">ホームページ</span>
+        </span>
         <span class="link-value">akaghef.github.io</span>
       </a>
       <a class="link-card" href="https://x.com/AkaGhef">
@@ -55,46 +80,85 @@ title: Akaghef's Homepage
 
   <section class="panel">
     <div class="section-heading">
-      <p class="section-kicker">Interests</p>
-      <h2>Areas I care about</h2>
+      <p class="section-kicker">
+        <span data-lang="en">Interests</span>
+        <span data-lang="ja">興味分野</span>
+      </p>
+      <h2>
+        <span data-lang="en">Areas I care about</span>
+        <span data-lang="ja">取り組んでいること</span>
+      </h2>
     </div>
     <div class="interest-grid">
       <article class="interest-card">
-        <p class="interest-tag">Mathematics / Physics</p>
-        <h3>Abstract structures and operators</h3>
+        <p class="interest-tag">
+          <span data-lang="en">Mathematics / Physics</span>
+          <span data-lang="ja">数学 / 物理</span>
+        </p>
+        <h3>
+          <span data-lang="en">Abstract structures and operators</span>
+          <span data-lang="ja">抽象構造と作用素</span>
+        </h3>
         <p>
-          Derivative operators, quantum groups, and 3-dimensional manifolds.
+          <span data-lang="en">Derivative operators, quantum groups, and 3-dimensional manifolds.</span>
+          <span data-lang="ja">微分作用素、量子群、3次元多様体などに興味があります。</span>
         </p>
       </article>
 
       <article class="interest-card">
-        <p class="interest-tag">Birdman Rally</p>
-        <h3>Aircraft design and sensing systems</h3>
+        <p class="interest-tag">
+          <span data-lang="en">Birdman Rally</span>
+          <span data-lang="ja">鳥人間コンテスト</span>
+        </p>
+        <h3>
+          <span data-lang="en">Aircraft design and sensing systems</span>
+          <span data-lang="ja">機体設計と計測システム</span>
+        </h3>
         <p>
-          Participated in the 2022 and 2023 contests. Chief designer for the 2023 contest, working on electronics,
-          controls, programming, circuit design, data analysis, and optimization.
+          <span data-lang="en">Participated in the 2022 and 2023 contests. Chief designer for the 2023 contest, working on electronics, controls, programming, circuit design, data analysis, and optimization.</span>
+          <span data-lang="ja">2022年、2023年の大会に参加。2023年はチーフデザイナーとして、電子回路、制御、プログラミング、回路設計、データ解析、最適化に取り組みました。</span>
         </p>
       </article>
 
       <article class="interest-card">
-        <p class="interest-tag">Minecraft</p>
-        <h3>High-performance calculators in redstone</h3>
-        <p>
-          Building compact and fast calculators in Minecraft Java and Bedrock Edition.
+        <p class="interest-tag">
+          <span data-lang="en">Minecraft</span>
+          <span data-lang="ja">Minecraft</span>
         </p>
-        <a class="text-link" href="https://www.youtube.com/watch?v=k6dFtVdtbHQ">Watch the trigonometric function calculator</a>
+        <h3>
+          <span data-lang="en">High-performance calculators in redstone</span>
+          <span data-lang="ja">レッドストーンで作る高性能計算機</span>
+        </h3>
+        <p>
+          <span data-lang="en">Building compact and fast calculators in Minecraft Java and Bedrock Edition.</span>
+          <span data-lang="ja">Minecraft Java Edition / Bedrock Edition で、高精度かつ高速でコンパクトな計算機を作っています。</span>
+        </p>
+        <a class="text-link" href="https://www.youtube.com/watch?v=k6dFtVdtbHQ">
+          <span data-lang="en">Watch the trigonometric function calculator</span>
+          <span data-lang="ja">三角関数計算機の動画を見る</span>
+        </a>
       </article>
     </div>
   </section>
 
   <section class="panel panel-accent">
     <div class="section-heading">
-      <p class="section-kicker">Events</p>
-      <h2>Talks, appearances, and conference notes</h2>
+      <p class="section-kicker">
+        <span data-lang="en">Events</span>
+        <span data-lang="ja">イベント</span>
+      </p>
+      <h2>
+        <span data-lang="en">Talks, appearances, and conference notes</span>
+        <span data-lang="ja">発表、出演、学会参加の記録</span>
+      </h2>
     </div>
     <p class="spotlight-copy">
-      A running list of presentations, interviews, competition appearances, and conference attendance.
+      <span data-lang="en">A running list of presentations, interviews, competition appearances, and conference attendance.</span>
+      <span data-lang="ja">発表、インタビュー、大会出演、学会参加などをまとめています。</span>
     </p>
-    <a class="button button-primary" href="/EventsTalks.html">Open Event Page</a>
+    <a class="button button-primary" href="/EventsTalks.html">
+      <span data-lang="en">Open Event Page</span>
+      <span data-lang="ja">イベントページを開く</span>
+    </a>
   </section>
 </main>

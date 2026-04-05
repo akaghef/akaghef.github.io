@@ -40,7 +40,7 @@
 
     var buttons = document.querySelectorAll("[data-lang-toggle]");
     buttons.forEach(function (button) {
-      button.textContent = lang === "en" ? "JA" : "EN";
+      button.textContent = lang === "en" ? "日本語" : "English";
       button.setAttribute("aria-label", lang === "en" ? "Switch language to Japanese" : "Switch language to English");
     });
 

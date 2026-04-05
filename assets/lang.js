@@ -1,5 +1,6 @@
 (function () {
   var storageKey = "akaghef-lang";
+  var supported = ["en", "ja"];
 
   function getInitialLanguage() {
     try {
@@ -24,8 +25,18 @@
   }
 
   function setLanguage(lang) {
+    if (supported.indexOf(lang) === -1) {
+      lang = "en";
+    }
+
     document.documentElement.setAttribute("data-lang-active", lang);
     document.documentElement.lang = lang;
+
+    var nodes = document.querySelectorAll("[data-lang]");
+    nodes.forEach(function (node) {
+      var nodeLang = node.getAttribute("data-lang");
+      node.hidden = nodeLang !== lang;
+    });
 
     var buttons = document.querySelectorAll("[data-lang-toggle]");
     buttons.forEach(function (button) {

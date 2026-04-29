@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M3E — Knowledge base for science, from daily notes to research</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/style.css">
+  <script defer src="/assets/lang.js"></script>
+</head>
+<body>
+  <main class="page-shell">
+    <div class="topbar">
+      <a class="home-mark" href="/">Akaghef</a>
+      <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch language">日本語</button>
+    </div>
+
+    <section class="hero hero-compact">
+      <p class="eyebrow">
+        <span data-lang="en">Overview</span>
+        <span data-lang="ja">Overview</span>
+      </p>
+      <h1>
+        <span data-lang="en">M3E - Mind Map Model Engine</span>
+        <span data-lang="ja">M3E - Mind Map Model Engine</span>
+      </h1>
+      <p class="hero-tagline">
+        <span data-lang="en">A Graph / Tree UI tool for framework-thinking in research and development.</span>
+        <span data-lang="ja">科学研究・開発のためのフレームワーク思考を支援する Graph / Tree 構造 UI ツール。</span>
+      </p>
+      <p class="hero-copy">
+        <span data-lang="en">M3E (Mind Map Model Engine) is a Graph / Tree UI tool aimed at supporting framework-thinking in scientific research and development. It is designed to become the next step beyond dialogue-form LLMs — visualizing and externalizing knowledge and thought, building a world model, and accelerating decision-making.</span>
+        <span data-lang="ja">M3E (Mind Map Model Engine) は、科学研究・開発のためのフレームワーク思考の支援を目的とした Graph / Tree 構造 UI のツールです。目標として対話形式の LLM の進化系となり、知識や思考を可視化・外在化し、世界モデルを構築し、意思決定を加速することを掲げます。</span>
+      </p>
+      <p class="hero-copy">
+        <span data-lang="en">Its features include folder-like <strong>scope</strong> control, a conversion layer between linear structures (like this very paragraph) and tree structures, and three bands of thought — <strong>Flash / Rapid / Deep</strong>. Offline operation is the core; AI integration, team workflows, and cloud sync are currently under active development.</span>
+        <span data-lang="ja">特徴として、フォルダーのようなスコープ制御機能、この文章のような線形な構造と木構造を相互につなぐ変換機能、<strong>Flash / Rapid / Deep</strong> の 3 つの思考の帯域を備えます。オフライン機能を核として、AI 連携・チーム運用・クラウド同期の機能を現在開発中です。</span>
+      </p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="https://github.com/akaghef/M3E">
+          <span data-lang="en">Source on GitHub</span>
+          <span data-lang="ja">GitHub リポジトリ</span>
+        </a>
+        <a class="button button-secondary" href="https://github.com/akaghef/M3E/releases">
+          <span data-lang="en">Releases</span>
+          <span data-lang="ja">リリース一覧</span>
+        </a>
+        <a class="button button-secondary" href="/">
+          <span data-lang="en">Back to Homepage</span>
+          <span data-lang="ja">ホームに戻る</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <p class="section-kicker">
+          <span data-lang="en">Vision</span>
+          <span data-lang="ja">Vision</span>
+        </p>
+        <h2>
+          <span data-lang="en">Future Vision of M3E</span>
+          <span data-lang="ja">M3Eの究極の目標</span>
+        </h2>
+      </div>
+      <div class="interest-grid">
+        <article class="interest-card">
+          <p class="interest-tag">V1</p>
+          <h3>
+            <span data-lang="en">Scalable from daily notes to research</span>
+            <span data-lang="ja">日常から研究までスケーラブルな知識ベース</span>
+          </h3>
+          <p>
+            <span data-lang="en">Build a knowledge base where reliability accumulates not just locally but at long-term, large scale, without breaking down midway.</span>
+            <span data-lang="ja">局所ではなく長期・大域でも信頼性が累積して、破綻しない知識運用を実現する。</span>
+          </p>
+        </article>
+
+        <article class="interest-card">
+          <p class="interest-tag">V2</p>
+          <h3>
+            <span data-lang="en">A workspace where humans and AI talk through structure</span>
+            <span data-lang="ja">人間と AI が構造的に対話できる作業場</span>
+          </h3>
+          <p>
+            <span data-lang="en">Share map / scope / node so that humans and AI can move work forward together within the same workspace.</span>
+            <span data-lang="ja">map / scope / node を共有しながら、人間と AI が同じ場で作業を進められるようにする。</span>
+          </p>
+        </article>
+
+        <article class="interest-card">
+          <p class="interest-tag">V3</p>
+          <h3>
+            <span data-lang="en">Crystallize thought into a world model and accelerate the projection cycle</span>
+            <span data-lang="ja">思考・知識を世界モデルとして結晶化し、多様な成果物への射影サイクルを加速する</span>
+          </h3>
+          <p>
+            <span data-lang="en">Treat the world model on the Deep side as an asset, and reach a state where Rapid outputs can be projected from it for specific purposes.</span>
+            <span data-lang="ja">Deep 側の世界モデルを資産にし、用途別の Rapid 出力を射影できる状態を目指す。</span>
+          </p>
+        </article>
+
+        <article class="interest-card">
+          <p class="interest-tag">V4</p>
+          <h3>
+            <span data-lang="en">Foundation that integrates Mapify × Miro × Obsidian × GitHub</span>
+            <span data-lang="ja">Mapify × Miro × Obsidian × GitHub を統合する基盤システム</span>
+          </h3>
+          <p>
+            <span data-lang="en">Bind rapid mind-mapping, visual collaboration, structured knowledge, and version control into a single foundation operated as one.</span>
+            <span data-lang="ja">迅速なマインドマップ化、ビジュアルコラボ、構造化知識、版管理を一つの運用に束ねる基盤を作る。</span>
+          </p>
+        </article>
+
+        <article class="interest-card">
+          <p class="interest-tag">V5</p>
+          <h3>
+            <span data-lang="en">Make Map-Driven Development (MDD) work</span>
+            <span data-lang="ja">Map-Driven Development (MDD) を成立させる</span>
+          </h3>
+          <p>
+            <span data-lang="en">Treat tasks, strategy, status, handoff, and review together on a single map, so that humans and AI can advance development from the same view.</span>
+            <span data-lang="ja">task、strategy、status、handoff、review を map 上で一体に扱い、人間と AI が同じ視界のまま開発を進められる状態を目指す。</span>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <p class="section-kicker">
+          <span data-lang="en">Core model</span>
+          <span data-lang="ja">中核モデル</span>
+        </p>
+        <h2>
+          <span data-lang="en">Flash / Rapid / Deep — one evolution axis</span>
+          <span data-lang="ja">Flash / Rapid / Deep — 単一進化軸</span>
+        </h2>
+      </div>
+      <p class="hero-copy">
+        <span data-lang="en">M3E handles the same underlying data across bands where granularity and structural properties evolve together — Flash / Rapid / Deep. These are not independent dimensions but a single axis of evolution.</span>
+        <span data-lang="ja">M3E は同じ基礎データを、単位（粒度）と構造の性質が連動して変化する帯域で扱う。帯域は Flash / Rapid / Deep の 3 段階。これは独立した複数軸ではなく、単一の進化軸。</span>
+      </p>
+      <div class="interest-grid">
+        <article class="interest-card">
+          <p class="interest-tag" style="font-size: 3em;">Flash</p>
+          <h3>
+            <span data-lang="en">Fragments and raw material (before structure)</span>
+            <span data-lang="ja">断片・素材（構造化前）</span>
+          </h3>
+          <p>
+            <span data-lang="en">Multimodal — text, images, audio, clips. Connected to daily life, sudden ideas, scattered notes. External analogue: inbox / clipboard / quick capture.</span>
+            <span data-lang="ja">マルチモーダル（テキスト・画像・音声・貼付）、日常との連結、突発的アイデア、散発的メモ。外部類似: inbox / clipboard / quick capture。</span>
+          </p>
+        </article>
+
+        <article class="interest-card">
+          <p class="interest-tag" style="font-size: 3em;">Rapid</p>
+          <h3>
+            <span data-lang="en">One document — syntax tree</span>
+            <span data-lang="ja">文書 1 つ — syntax tree</span>
+          </h3>
+          <p>
+            <span data-lang="en">A self-contained logical structure as a single document, readable as natural-language exposition. External analogue: Freeplane mind-map / LaTeX outline / Markdown outline.</span>
+            <span data-lang="ja">syntax tree（親子、章立て、節、説明順序あり、線形化可能）。1 本の文書として閉じた論理構造、自然言語の説明として流し読める。外部類似: Freeplane mindmap / LaTeX 章立て / Markdown アウトライン。</span>
+          </p>
+        </article>
+
+        <article class="interest-card">
+          <p class="interest-tag" style="font-size: 3em;">Deep</p>
+          <h3>
+            <span data-lang="en">A body of documents — semantic graph</span>
+            <span data-lang="ja">文書群・知識体系 — semantic graph</span>
+          </h3>
+          <p>
+            <span data-lang="en">A conceptual network spanning many documents, where the same node appears on multiple paths and the system is read as a whole. External analogue: nLab / Wikidata / mathlib4 dependency graph / Stacks Project / a researcher's mind.</span>
+            <span data-lang="ja">semantic graph（tree ではない、多種エッジ、説明順序とは独立）。複数文書を横断する概念網、同じノードが複数経路に現れる、体系として読む。外部類似: nLab / Wikidata / mathlib4 依存網 / Stacks Project / 研究者の頭の中。</span>
+          </p>
+        </article>
+      </div>
+      <p class="hero-copy" style="margin-top: 24px;">
+        <span data-lang="en">Operations between bands run in three directions: <strong>promote</strong> (Flash → Rapid) takes raw material into a document structure; <strong>systematize</strong> (Rapid → Deep) bundles multiple documents into a conceptual network; <strong>project</strong> (Deep → Rapid) carves out a single document with an explanatory order for a specific purpose. Daily operation is the Rapid ⇄ Deep loop: systematize what you have written, then project a fresh document from the system for a new purpose.</span>
+        <span data-lang="ja">帯域間の操作は 3 つの向き。<strong>昇格</strong>（Flash → Rapid）は素材を文書構造に取り込む。<strong>体系化</strong>（Rapid → Deep）は複数文書を束ね、概念網に編み上げる。<strong>射影</strong>（Deep → Rapid）は体系から特定目的の説明順序を持つ 1 文書を切り出す。日常運用は Rapid ⇄ Deep の往復であり、書いた文書を体系化して体系に取り込み、体系から新しい文書を射影する。</span>
+      </p>
+    </section>
+
+    <section class="panel panel-accent">
+      <div class="section-heading">
+        <p class="section-kicker">
+          <span data-lang="en">Status</span>
+          <span data-lang="ja">現在地</span>
+        </p>
+        <h2>
+          <span data-lang="en">Where development stands now</span>
+          <span data-lang="ja">いま何をしているか</span>
+        </h2>
+      </div>
+      <p class="hero-copy">
+        <span data-lang="en">As of 2026-04-29. Active development target is <code>beta/</code>. Latest release on <code>main</code> is tagged <a class="text-link" href="https://github.com/akaghef/M3E/releases/tag/v260419-2"><code>v260419-2</code></a>; data schema is <code>v1</code>. Read / edit / render / save all run end-to-end. See the full <a class="text-link" href="https://github.com/akaghef/M3E/releases">release history</a> on GitHub.</span>
+        <span data-lang="ja">2026-04-29 時点。開発対象は <code>beta/</code>。最新リリースは <code>main</code> / tag <a class="text-link" href="https://github.com/akaghef/M3E/releases/tag/v260419-2"><code>v260419-2</code></a>、データバージョンは schema <code>v1</code>。読み取り・編集・描画・保存はエンドツーエンドで動作中。<a class="text-link" href="https://github.com/akaghef/M3E/releases">リリース履歴</a>は GitHub に。</span>
+      </p>
+      <div class="interest-grid">
+        <article class="interest-card">
+          <p class="interest-tag">S2 — 実装中</p>
+          <h3>
+            <span data-lang="en">Team Collaboration as the top breakthrough</span>
+            <span data-lang="ja">Team Collaboration を最優先の突破口にする</span>
+          </h3>
+          <p>
+            <span data-lang="en">Entity registration, scope lock, and SSE are done; scope push is being finalized. Next few days: close Phase 1 and move into Phase 2 (conflict backup, entity UI, audit log).</span>
+            <span data-lang="ja">エンティティ登録・scope lock・SSE は完了。scope push を詰めている。数日内の焦点は Phase 1 を閉じて、Phase 2（conflict backup, エンティティ UI, 監査ログ）へ進むこと。</span>
+          </p>
+        </article>
+
+        <article class="interest-card">
+          <p class="interest-tag">S3 — 並走中</p>
+          <h3>
+            <span data-lang="en">Lock down save / sync / restore reliability first</span>
+            <span data-lang="ja">保存・同期・復元の信頼性を先に固める</span>
+          </h3>
+          <p>
+            <span data-lang="en">Continuing improvements to the Cloud Sync conflict UI and the data runtime / distribution paths. Next few days: strengthen role boundaries, conflict display, and alignment of operational docs.</span>
+            <span data-lang="ja">Cloud Sync 競合 UI 改善、data runtime / distribution 経路の整理を継続。数日内の焦点は role 境界、競合表示、運用文書の整合を強めること。</span>
+          </p>
+        </article>
+
+        <article class="interest-card">
+          <p class="interest-tag">S13 — 継続監視</p>
+          <h3>
+            <span data-lang="en">Maintain a path that doesn't lean too hard on external infra or providers</span>
+            <span data-lang="ja">外部インフラやプロバイダに依存しすぎない経路を維持する</span>
+          </h3>
+          <p>
+            <span data-lang="en">Beta/Final convergence, removal of legacy paths, and runtime path tidying are in flight. Next few days: simplify the beta/final operational route and reduce dependency paths.</span>
+            <span data-lang="ja">beta/final 収束、legacy 経路削除、runtime 経路整理を進行。数日内の焦点は beta/final の運用導線を単純化し、依存経路を減らすこと。</span>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="section-heading">
+        <p class="section-kicker">
+          <span data-lang="en">Source</span>
+          <span data-lang="ja">ソース</span>
+        </p>
+        <h2>
+          <span data-lang="en">Repository and releases</span>
+          <span data-lang="ja">リポジトリとリリース</span>
+        </h2>
+      </div>
+      <div class="link-grid">
+        <a class="link-card" href="https://github.com/akaghef/M3E">
+          <span class="link-label">
+            <span data-lang="en">GitHub repository</span>
+            <span data-lang="ja">GitHub リポジトリ</span>
+          </span>
+          <span class="link-value">github.com/akaghef/M3E</span>
+        </a>
+        <a class="link-card" href="https://github.com/akaghef/M3E/releases">
+          <span class="link-label">
+            <span data-lang="en">Releases</span>
+            <span data-lang="ja">リリース一覧</span>
+          </span>
+          <span class="link-value">github.com/akaghef/M3E/releases</span>
+        </a>
+        <a class="link-card" href="https://github.com/akaghef/M3E/releases/tag/v260419-2">
+          <span class="link-label">
+            <span data-lang="en">Latest release · v260419-2</span>
+            <span data-lang="ja">最新リリース · v260419-2</span>
+          </span>
+          <span class="link-value">tag/v260419-2</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="timeline">
+      <article class="timeline-year">
+        <div class="year-label">2026</div>
+        <div class="year-items">
+          <section class="timeline-card">
+            <h2>
+              <span data-lang="en">2026-04-29 · Template-first PJv34 Rebuild</span>
+              <span data-lang="ja">2026-04-29 · Template-first PJv34 Rebuild</span>
+            </h2>
+            <p>
+              <span data-lang="en">Drafted a System Block Template catalog (LLM / IO / Flow / Subsystem) so AI can rebuild the PJv34 Weekly Review system from templates and run it. Added <code>T-TPL-0</code> through <code>T-TPL-2</code> as the acceptance gate for PJ04. Catalog is in human review.</span>
+              <span data-lang="ja">System Block Template (LLM / IO / Flow / Subsystem 4 区分) の catalog を draft v0.1 として作成。AI がテンプレから PJv34 Weekly Review system を再構築して Run することを PJ04 の G1/G2 acceptance に位置づけ、<code>T-TPL-0</code>〜<code>T-TPL-2</code> を追加。catalog は人間レビュー待ち。</span>
+            </p>
+          </section>
+
+          <section class="timeline-card">
+            <h2>
+              <span data-lang="en">2026-04-29 · PJv34 Weekly Review minimum loop</span>
+              <span data-lang="ja">2026-04-29 · PJv34 Weekly Review 最小ループ稼働</span>
+            </h2>
+            <p>
+              <span data-lang="en">Implemented a Node-side weekly review loop (<code>weekly_review_loop.ts</code>) that reads <code>projects/</code> sub-PJs and writes Markdown / JSON reports under <code>tmp/</code>. Restructured into LangGraph-shaped state + nodes (<code>loadProjectsNode → buildContextNode → generateReportNode → writeArtifactsNode</code>) with step traces.</span>
+              <span data-lang="ja">Node 側の最小ループ <code>weekly_review_loop.ts</code> を実装。<code>projects/</code> 配下の sub-PJ を読んで <code>tmp/</code> に Markdown / JSON レポートを出力する 1 周が成立し、続けて LangGraph-shaped state + node 関数 (<code>loadProjectsNode → buildContextNode → generateReportNode → writeArtifactsNode</code>) に分割し step trace も出力するように再構成。</span>
+            </p>
+          </section>
+
+          <section class="timeline-card">
+            <h2>
+              <span data-lang="en">2026-04-29 · MDD glossary promotion</span>
+              <span data-lang="ja">2026-04-29 · MDD 用語を全体 Glossary に昇格</span>
+            </h2>
+            <p>
+              <span data-lang="en">Promoted PJ04's MDD vocabulary to the project-wide glossary: <em>Authoring Map</em>, <em>System Diagram</em>, <em>Contract Tree</em>, <em>GraphSpec</em>, <em>Runtime Board</em>, <em>Trace Store</em>, <em>Run / Thread</em>, <em>Publish</em>, <em>Concreteness Axis</em>. The separation Authoring Map / GraphSpec / Runtime / Trace Store / Runtime Board is now part of the core vocabulary.</span>
+              <span data-lang="ja">PJ04 で固めた MDD 用語を全体 Glossary に昇格しました（<em>Authoring Map</em>, <em>System Diagram</em>, <em>Contract Tree</em>, <em>GraphSpec</em>, <em>Runtime Board</em>, <em>Trace Store</em>, <em>Run / Thread</em>, <em>Publish</em>, <em>Concreteness Axis</em>）。Authoring Map / GraphSpec / Runtime / Trace Store / Runtime Board の分離が中核語彙になりました。</span>
+            </p>
+          </section>
+
+          <section class="timeline-card">
+            <h2>
+              <span data-lang="en">2026-04-22 · S1 reframed around messaging and reminders</span>
+              <span data-lang="ja">2026-04-22 · S1 をメッセージとリマインダー軸に具体化</span>
+            </h2>
+            <p>
+              <span data-lang="en">Rewrote Strategy <code>S1</code> so the day-to-day surface is messaging and task reminders rather than chasing a unified platform. Joint adapters take in external channels, and M3E's knowledge network produces reply drafts and tidied notifications.</span>
+              <span data-lang="ja">Strategy <code>S1</code> を「外部プラットフォームを統一する」のではなく、「Joint で各チャネルを受け、M3E の知識ネットワークを参照して返信 draft と通知整理を行う」方向に書き直しました。Flash を素材置き場ではなく、外部会話や軽い依頼の入口として位置づけ。</span>
+            </p>
+          </section>
+
+          <section class="timeline-card">
+            <h2>
+              <span data-lang="en">2026-04-22 · PJ04 kickoff — Mermaid + System + LangGraph</span>
+              <span data-lang="ja">2026-04-22 · PJ04 キックオフ（Mermaid + System + LangGraph）</span>
+            </h2>
+            <p>
+              <span data-lang="en">Started a sandbox sub-project on the <code>prj/04_MermaidSystemLangGraph</code> branch to author system diagrams graph-first, render them at parity with a canonical Mermaid sample, and compile the result into a LangGraph runtime. The piece PJ03 wanted to do but kept getting tangled with groundwork and projection — now in a clean container.</span>
+              <span data-lang="ja">PJ04 を <code>prj/04_MermaidSystemLangGraph</code> ブランチで開始。graph-first に system diagram を編集し、canonical な Mermaid sample 相当の描画と LangGraph runtime への compile を 1 ループにまとめる sandbox PJ。PJ03 で混線していた論点をまっさらな器でやり直す位置づけ。</span>
+            </p>
+          </section>
+
+          <section class="timeline-card">
+            <h2>
+              <span data-lang="en">2026-04-20 · Planning Hierarchy formalized</span>
+              <span data-lang="ja">2026-04-20 · 計画階層を 5 層に再整理</span>
+            </h2>
+            <p>
+              <span data-lang="en">Split the planning hierarchy into Principle / Vision / Strategy / Goal / Task and gave each a stable home: <code>P*</code> are immovable principles, <code>V*</code> are unfilled gaps, and <code>S*</code> is where decisions actually happen. <code>P*</code>, <code>V*</code>, <code>S*</code> are repo-wide stable IDs that don't get renumbered on edits. Added <code>Agent_Brief.md</code> as a one-page session-start cheat sheet. Locked the active <code>V*</code> set to <code>V1</code>–<code>V5</code>.</span>
+              <span data-lang="ja">計画階層を Principle / Vision / Strategy / Goal / Task の 5 層に分け、それぞれの正本を分離。<code>P*</code> は固定原則、<code>V*</code> は未達ギャップ、<code>S*</code> は判断が起きる層。<code>P*</code>/<code>V*</code>/<code>S*</code> は repo-wide で長期固定の安定 ID とし、並び替えで番号を付け替えないルールに。<code>Agent_Brief.md</code> をセッション開始用 1 枚チートシートとして新設。Vision を <code>V1</code>〜<code>V5</code> に確定。</span>
+            </p>
+          </section>
+
+          <section class="timeline-card">
+            <h2>
+              <span data-lang="en">2026-04-19 · Beta release v260419-2</span>
+              <span data-lang="ja">2026-04-19 · Beta リリース v260419-2</span>
+            </h2>
+            <p>
+              <span data-lang="en">Tagged the latest stable beta on <code>main</code>. The day-to-day launcher (<code>scripts/beta/launch.bat</code>) starts the viewer at <code>localhost:4173</code>, with optional cloud sync (file mirror or Supabase) and an optional AI provider layer that supports DeepSeek and local Ollama through Bitwarden.</span>
+              <span data-lang="ja">最新の安定 beta を <code>main</code> 上にタグ付け。日常起動用の <code>scripts/beta/launch.bat</code> で viewer が <code>localhost:4173</code> に立ち上がり、cloud sync（file mirror / Supabase）と AI provider 層（DeepSeek / ローカル Ollama、Bitwarden 経由）が optional で乗ります。</span>
+            </p>
+          </section>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

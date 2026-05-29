@@ -1,0 +1,806 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>研究室の所属を検討している学生へ</title>
+  <style>
+    :root {
+      --bg: #f6f7f9;
+      --ink: #172033;
+      --muted: #5d687a;
+      --line: #d8dee8;
+      --panel: #ffffff;
+      --soft: #eef3f7;
+      --blue: #1f6feb;
+      --green: #267b5e;
+      --red: #b42318;
+      --gold: #8a6100;
+      --shadow: 0 10px 28px rgba(20, 31, 50, .08);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.72;
+    }
+
+    a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+
+    .wrap {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 14px 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .brand {
+      font-weight: 800;
+      color: var(--ink);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(300px, .85fr);
+      gap: 28px;
+      align-items: start;
+      padding: 42px 0 46px;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(34px, 5vw, 56px);
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      margin: 0;
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .hero-panel {
+      background: var(--soft);
+      border: 1px solid var(--line);
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-panel h2 {
+      margin: 0 0 10px;
+      font-size: 18px;
+    }
+
+    .hero-panel ol {
+      margin: 0;
+      padding-left: 22px;
+    }
+
+    .badge-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 4px 10px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .nav {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 10px;
+      padding: 0 0 24px;
+    }
+
+    .nav a {
+      display: block;
+      padding: 10px 12px;
+      background: #fff;
+      border: 1px solid var(--line);
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    main { padding: 28px 0 64px; }
+
+    section {
+      margin: 0 0 30px;
+      padding: 28px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .section-head {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 12px;
+    }
+
+    .sid {
+      color: var(--blue);
+      font-weight: 900;
+      font-size: 13px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 24px;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    p { margin: 0 0 12px; }
+    ul, ol { margin: 0; padding-left: 22px; }
+    li + li { margin-top: 6px; }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .note {
+      padding: 16px;
+      border-left: 4px solid var(--blue);
+      background: #f4f8ff;
+    }
+
+    .note.strong {
+      border-left-color: var(--red);
+      background: #fff6f5;
+    }
+
+    .mini {
+      padding: 16px;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+
+    .axis {
+      display: grid;
+      grid-template-columns: minmax(180px, .55fr) minmax(0, 1fr);
+      border: 1px solid var(--line);
+      margin-top: 14px;
+    }
+
+    .axis > div {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .axis > div:nth-child(odd) {
+      background: var(--soft);
+      font-weight: 900;
+    }
+
+    .axis > div:nth-last-child(-n+2) { border-bottom: 0; }
+
+    .mermaid-wrap {
+      margin-top: 18px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      background: #fbfcfe;
+      overflow-x: auto;
+    }
+
+    .mermaid {
+      min-width: 920px;
+    }
+
+    .scatter-map {
+      position: relative;
+      height: 680px;
+      margin-top: 18px;
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(90deg, rgba(216, 222, 232, .52) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(216, 222, 232, .52) 1px, transparent 1px),
+        #fbfcfe;
+      background-size: 72px 72px;
+      overflow: hidden;
+    }
+
+    .map-lines {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .map-lines line,
+    .map-lines path {
+      stroke: rgba(31, 111, 235, .28);
+      stroke-width: 1.4;
+      fill: none;
+    }
+
+    .node {
+      position: absolute;
+      left: var(--x);
+      top: var(--y);
+      transform: translate(-50%, -50%);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 34px;
+      max-width: 160px;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 900;
+      line-height: 1.25;
+      text-align: center;
+      box-shadow: 0 8px 18px rgba(20, 31, 50, .07);
+      word-break: keep-all;
+      overflow-wrap: anywhere;
+      z-index: 2;
+    }
+
+    .node.hub {
+      min-height: 54px;
+      padding: 10px 16px;
+      border-color: rgba(31, 111, 235, .45);
+      background: #f4f8ff;
+      font-size: 16px;
+    }
+
+    .node.q { border-color: #b8cdf5; background: #f3f7ff; }
+    .node.topo { border-color: #a6d2bf; background: #f1faf6; }
+    .node.knot { border-color: #d8c2ef; background: #faf6ff; }
+    .node.homo { border-color: #dfca8a; background: #fff9e8; }
+    .node.comp { border-color: #e8b3ad; background: #fff6f5; }
+    .node.basic { border-color: #c8d0da; background: #f8fafc; }
+
+    .cluster-label {
+      position: absolute;
+      left: var(--x);
+      top: var(--y);
+      transform: translate(-50%, -50%);
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0;
+      z-index: 1;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: 180px 1fr 1fr;
+      gap: 10px;
+      align-items: stretch;
+      margin-top: 14px;
+    }
+
+    .flow-item {
+      border: 1px solid var(--line);
+      background: #fff;
+      padding: 14px;
+      min-height: 88px;
+    }
+
+    .flow-item.fixed { background: #f7f1df; border-color: #e1c878; }
+    .flow-item.theme { background: #eef7f3; border-color: #a6d2bf; }
+    .flow-item.student { background: #eef4ff; border-color: #b8cdf5; }
+
+    .flow-label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 12px;
+      color: var(--muted);
+      font-weight: 900;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin-top: 12px;
+    }
+
+    table {
+      width: 100%;
+      min-width: 760px;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    th, td {
+      border: 1px solid var(--line);
+      padding: 10px 12px;
+      vertical-align: top;
+      text-align: left;
+    }
+
+    th {
+      background: var(--soft);
+      font-weight: 900;
+    }
+
+    .faq {
+      display: grid;
+      gap: 12px;
+    }
+
+    details {
+      border: 1px solid var(--line);
+      background: #fff;
+      padding: 12px 14px;
+    }
+
+    summary {
+      cursor: pointer;
+      font-weight: 900;
+    }
+
+    details p { margin-top: 10px; color: var(--muted); }
+
+    footer {
+      border-top: 1px solid var(--line);
+      background: #fff;
+      color: var(--muted);
+      font-size: 13px;
+      padding: 20px 0;
+    }
+
+    @media (max-width: 900px) {
+      .hero, .grid-2, .grid-3, .flow, .nav {
+        grid-template-columns: 1fr;
+      }
+
+      section { padding: 20px; }
+
+      .axis { grid-template-columns: 1fr; }
+      .axis > div { border-bottom: 0; }
+      .axis > div:nth-child(even) { border-bottom: 1px solid var(--line); }
+      .axis > div:last-child { border-bottom: 0; }
+
+      .scatter-map {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 14px;
+        background: #fbfcfe;
+      }
+
+      .map-lines,
+      .cluster-label { display: none; }
+
+      .node,
+      .node.hub {
+        position: static;
+        transform: none;
+        max-width: none;
+        min-height: 34px;
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="topbar">
+        <div class="brand">鈴木咲衣研究室 見学ガイド</div>
+        <div>Institute of Science Tokyo / School of Computing</div>
+      </div>
+      <div class="hero">
+        <div>
+          <h1>研究室の所属を検討している学生へ</h1>
+          <p class="lead">鈴木咲衣研究室を候補にしている学生が、受験ルート、研究分野、研究の進め方、過去テーマを順に確認するための案内です。</p>
+          <div class="badge-row">
+            <span class="badge">情報理工学院</span>
+            <span class="badge">数理・計算科学系</span>
+            <span class="badge">結び目理論</span>
+            <span class="badge">量子トポロジー</span>
+            <span class="badge">3次元多様体</span>
+            <span class="badge">計算・形式化</span>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <h2>読む順番</h2>
+          <ol>
+            <li>まず、所属と受験ルートを確認する。</li>
+            <li>次に、研究分野が自分の関心に合うか見る。</li>
+            <li>その上で、テーマと学生の組合せで研究計画を考える。</li>
+            <li>最後に、過去の学生アブストで実例を見る。</li>
+          </ol>
+        </div>
+      </div>
+      <nav class="nav" aria-label="ページ内ナビゲーション">
+        <a href="#route">1. 所属と受験ルート</a>
+        <a href="#themes">2. 研究分野</a>
+        <a href="#theme-map">3. Mindmap</a>
+        <a href="#policy">4. テーマ設計</a>
+        <a href="#abstracts">5. 過去テーマ</a>
+        <a href="#visit">6. 見学で確認</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="route">
+      <div class="section-head">
+        <span class="sid">RT1</span>
+        <h2>まず確認すること: 所属と受験ルート</h2>
+      </div>
+      <div class="note strong">
+        <p>鈴木咲衣先生の所属は情報理工学院です。鈴木先生を主担当として考える場合は、情報理工学院・数理計算科学系から受けることを強く推奨します。</p>
+      </div>
+      <div class="grid-2" style="margin-top: 16px;">
+        <div class="mini">
+          <h3>なぜ先に所属を見るのか</h3>
+          <p>研究室選びは、研究テーマだけでなく、出願先、主担当、セミナー、修士論文研究までの動線で決まります。鈴木研を考えるなら、まず情報理工学院を軸に置くのが自然です。</p>
+        </div>
+        <div class="mini">
+          <h3>見学前に確認すること</h3>
+          <ul>
+            <li>数理・計算科学系を第一候補にしているか。</li>
+            <li>鈴木先生の所属が情報理工学院であることを理解しているか。</li>
+            <li>第二志望以下の教員にも相談する必要があるか。</li>
+            <li>今年の受入見込みを直接確認する必要があるか。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="themes">
+      <div class="section-head">
+        <span class="sid">TH1</span>
+        <h2>鈴木研で扱う中心分野</h2>
+      </div>
+      <p>中心は、結び目理論、3次元多様体、量子トポロジー、量子不変量です。入口は一つではなく、代数、位相、圏論、グラフ、計算、形式化などから接続できます。</p>
+      <div class="grid-3">
+        <div class="mini">
+          <h3>中心線</h3>
+          <p>量子群、Heisenberg double、Kuperberg不変量、Jones多項式、3次元多様体。</p>
+        </div>
+        <div class="mini">
+          <h3>入口になる基礎</h3>
+          <p>基礎位相、ホモロジー、曲面、モース理論、グラフ、圏・関手。</p>
+        </div>
+        <div class="mini">
+          <h3>広がり</h3>
+          <p>計算実験、パーシステントホモロジー、Leanによる形式化、テンソル計算。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="theme-map">
+      <div class="section-head">
+        <span class="sid">MM1</span>
+        <h2>テーマのMermaid Mindmap</h2>
+      </div>
+      <p>過去の学生アブストに出てくる題目語を、Mermaid mindmap として整理したものです。ノードは見学時に学生の関心を拾うためのキーワードです。</p>
+      <div class="mermaid-wrap" aria-label="鈴木研究室の学生アブスト由来テーマキーワードマップ">
+        <pre class="mermaid">
+mindmap
+  root((量子トポロジー))
+    量子代数
+      量子群
+      A-C-D型
+      Heisenberg double
+      微分演算子
+      ウェイトシステム
+      量子不変量
+    3次元トポロジー
+      3次元多様体
+      理想四面体分割
+      spine
+      normal o-graph
+      PL多様体
+    結び目
+      Jones多項式
+      Kuperberg不変量
+      skein algebra
+      Borromean rings
+      パーシステントホモロジー
+    圏・ホモロジー
+      モノイダル圏
+      圏と関手
+      コホモロジー
+      単体的ホモロジー
+    計算・形式化
+      Lean形式化
+      計算実験
+      tensor
+    基礎入口
+      四色問題
+      グラフ彩色
+      曲面
+      モース理論
+      ポアンカレ・ホップ
+        </pre>
+      </div>
+    </section>
+
+    <section id="policy">
+      <div class="section-head">
+        <span class="sid">AX1</span>
+        <h2>研究計画は「テーマ × 学生」で決まる</h2>
+      </div>
+      <div class="note">
+        <p>研究テーマは固定メニューではありません。進め方や難易度は、主にテーマの性質と学生本人の背景・自走力で決まります。制度面は固定条件で、時期やスケジュールはテーマの準備量・成果物の性質から派生します。</p>
+      </div>
+      <div class="axis" aria-label="研究計画の揺らぎの整理軸">
+        <div>固定条件</div>
+        <div>所属、制度、入試・修了要件</div>
+        <div>テーマ依存</div>
+        <div>難易度、必要知識、成果物、スケジュール</div>
+        <div>学生依存</div>
+        <div>基礎力、自走力、読解力、興味・志向</div>
+      </div>
+    </section>
+
+    <section id="cases">
+      <div class="section-head">
+        <span class="sid">CS1</span>
+        <h2>典型ケース</h2>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ケース</th>
+              <th>テーマの性質</th>
+              <th>学生の状態</th>
+              <th>進め方</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>CS1</td>
+              <td>基礎理論が重い</td>
+              <td>基礎未習</td>
+              <td>1年程度は文献読解・基礎学習中心</td>
+            </tr>
+            <tr>
+              <td>CS2</td>
+              <td>基礎理論が重い</td>
+              <td>基礎あり</td>
+              <td>早期に論文読解・問題設定へ</td>
+            </tr>
+            <tr>
+              <td>CS3</td>
+              <td>実装・計算寄り</td>
+              <td>実装経験あり</td>
+              <td>小さな実験・試作から開始</td>
+            </tr>
+            <tr>
+              <td>CS4</td>
+              <td>実装・計算寄り</td>
+              <td>実装未経験</td>
+              <td>ツール習得と小課題から開始</td>
+            </tr>
+            <tr>
+              <td>CS5</td>
+              <td>探索的</td>
+              <td>自走力あり</td>
+              <td>問題設定から共同設計</td>
+            </tr>
+            <tr>
+              <td>CS6</td>
+              <td>探索的</td>
+              <td>自走力が弱い</td>
+              <td>卒業可能な範囲にテーマを縮約</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="abstracts">
+      <div class="section-head">
+        <span class="sid">AB1</span>
+        <h2>過去の学生テーマを見る</h2>
+      </div>
+      <p>鈴木研究室の学生ページには、卒論・修論題目とアブストが公開されています。中心は結び目理論・量子トポロジーですが、入口は基礎位相、グラフ、圏、Leanによる形式化、計算的テーマまで幅があります。</p>
+      <div class="grid-3">
+        <div class="mini">
+          <h3>量子群・量子不変量</h3>
+          <p>Heisenberg double、Kuperberg不変量、ウェイトシステムなど。</p>
+        </div>
+        <div class="mini">
+          <h3>3次元トポロジー</h3>
+          <p>理想四面体分割、spine、normal o-graph、閉3次元多様体など。</p>
+        </div>
+        <div class="mini">
+          <h3>計算・形式化</h3>
+          <p>パーシステントホモロジー、Lean、Jones多項式の形式化など。</p>
+        </div>
+      </div>
+      <p style="margin-top: 14px;">詳しい一覧は研究室 Students ページで確認できます。このページでは公開用のたたき台として、主要なテーマ語だけを抜き出しています。</p>
+    </section>
+
+    <section id="schedule">
+      <div class="section-head">
+        <span class="sid">SC1</span>
+        <h2>スケジュール感</h2>
+      </div>
+      <p>スケジュールは独立変数ではなく、テーマの準備量・成果物の性質から派生します。</p>
+      <div class="flow" aria-label="スケジュールの派生関係">
+        <div class="flow-item fixed">
+          <span class="flow-label">固定条件</span>
+          制度
+        </div>
+        <div class="flow-item theme">
+          <span class="flow-label">テーマ依存</span>
+          準備量、成果物、理論の重さ、実装の有無
+        </div>
+        <div class="flow-item student">
+          <span class="flow-label">学生依存</span>
+          基礎力、自走力、読解力、週あたりの時間
+        </div>
+      </div>
+      <ul style="margin-top: 16px;">
+        <li>数学寄りテーマでは、最初の1年が基礎学習・文献読解中心になることがあります。</li>
+        <li>実装寄りテーマでは、比較的早く可視的な成果が出る場合があります。</li>
+        <li>探索的テーマでは、最初に問題設定・定義・評価軸の整理が必要になります。</li>
+      </ul>
+    </section>
+
+    <section id="visit">
+      <div class="section-head">
+        <span class="sid">ST1</span>
+        <h2>見学時に確認すること</h2>
+      </div>
+      <div class="grid-2">
+        <div class="mini">
+          <h3>学生側の情報</h3>
+          <ul>
+            <li>志望学院・志望系</li>
+            <li>数学的背景</li>
+            <li>プログラミング経験</li>
+            <li>英語論文の読解経験</li>
+            <li>興味のある分野・キーワード</li>
+            <li>卒業後の進路希望</li>
+            <li>修士・博士まで進む意志</li>
+          </ul>
+        </div>
+        <div class="mini">
+          <h3>研究室側が調整すること</h3>
+          <ul>
+            <li>基礎力が高い場合は、早めに論文・問題設定へ進める。</li>
+            <li>基礎未習だが意欲がある場合は、基礎学習計画を先に立てる。</li>
+            <li>実装力がある場合は、計算・可視化・実験型テーマも提案しやすい。</li>
+            <li>自走力が高い場合は、探索的テーマも候補にできる。</li>
+            <li>自走力が低い場合は、テーマを小さく切り、安定した課題にする。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq">
+      <div class="section-head">
+        <span class="sid">FQ1</span>
+        <h2>FAQ</h2>
+      </div>
+      <div class="faq">
+        <details open>
+          <summary>どの学院から受けるべきですか？</summary>
+          <p>鈴木先生の所属が情報理工学院であるため、情報理工学院・数理計算科学系から受けることを強く推奨します。</p>
+        </details>
+        <details>
+          <summary>研究テーマは最初から決まっていますか？</summary>
+          <p>完全固定ではありません。テーマの性質と学生の背景・興味・自走力に応じて設計します。</p>
+        </details>
+        <details>
+          <summary>数学が強くないと無理ですか？</summary>
+          <p>テーマによります。基礎理論が重いテーマでは最初に基礎学習が必要ですが、実装・計算寄りに調整することもあります。</p>
+        </details>
+        <details>
+          <summary>すぐ研究成果は出ますか？</summary>
+          <p>テーマによります。実装寄りなら早期に試作できますが、理論寄りでは最初は文献読解が中心になることがあります。</p>
+        </details>
+        <details>
+          <summary>過去の学生テーマは見られますか？</summary>
+          <p>研究室 Students ページで卒論・修論題目とアブストが公開されています。このページでは、そこから主要なテーマ語を抜き出して整理しています。</p>
+        </details>
+      </div>
+    </section>
+
+    <section id="flow">
+      <div class="section-head">
+        <span class="sid">FL1</span>
+        <h2>見学時の対応フロー</h2>
+      </div>
+      <ol>
+        <li>志望学院・志望系を確認する。</li>
+        <li>鈴木先生が情報理工学院所属であることを説明する。</li>
+        <li>興味分野・将来進路を聞く。</li>
+        <li>数学・実装・英語論文読解の経験を確認する。</li>
+        <li>過去の学生テーマを見せ、研究の幅を説明する。</li>
+        <li>テーマごとの準備量・リスク・成果物を説明する。</li>
+        <li>必要なら、事前に読む資料や勉強すべき内容を提示する。</li>
+      </ol>
+    </section>
+
+    <section id="close">
+      <div class="section-head">
+        <span class="sid">CL1</span>
+        <h2>最後に伝える結論</h2>
+      </div>
+      <div class="note">
+        <p>鈴木研究室を検討するなら、まず情報理工学院・数理計算科学系を軸にしてください。その上で、研究テーマは固定メニューから選ぶのではなく、テーマの性質と学生本人の準備状況を見て設計します。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>作成: 2026-05-29 / 鈴木咲衣研究室 見学対応資料</div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: "base",
+      securityLevel: "loose",
+      flowchart: {
+        curve: "basis",
+        htmlLabels: true,
+        nodeSpacing: 34,
+        rankSpacing: 44
+      },
+      themeVariables: {
+        fontFamily: '"Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, system-ui, sans-serif',
+        primaryColor: "#f4f8ff",
+        primaryTextColor: "#172033",
+        primaryBorderColor: "#1f6feb",
+        lineColor: "#9aa7bb",
+        clusterBkg: "#ffffff",
+        clusterBorder: "#d8dee8"
+      }
+    });
+  </script>
+</body>
+</html>
